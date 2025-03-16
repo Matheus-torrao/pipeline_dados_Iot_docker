@@ -13,7 +13,7 @@ engine = create_engine(Url)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-# Criação das views corrigidas
+# Criação das views no banco de dados
 create_view_max_temp_por_dispositivo_periodo = text("""
 DROP VIEW IF EXISTS max_temp_por_dispositivo_periodo;
 CREATE VIEW max_temp_por_dispositivo_periodo AS
@@ -48,7 +48,6 @@ GROUP BY DATE_TRUNC('hour', noted_date)
 ORDER BY hora;
 """)
 
-# views corrigidas
 try:
     session.execute(create_view_max_temp_por_dispositivo_periodo)
     session.execute(create_view_temp_max_min_por_dia)

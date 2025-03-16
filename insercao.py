@@ -40,7 +40,7 @@ Base.metadata.create_all(engine)
 # Ler dados do CSV
 df = pd.read_csv("/set_data/IOT-temp.csv")
 
-# Ajusta nomes das colunas para garantir compatibilidade
+# Ajusta nomes das colunas 
 df = df.rename(columns={"id": "record_id", "room_id/id": "room_id", "out/in": "location"})
 
 # Converte a coluna de data para TIMESTAMP
