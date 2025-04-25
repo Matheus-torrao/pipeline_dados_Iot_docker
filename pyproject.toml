@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "pipeline_dados_iot_docker"
+version = "0.1.0"
+description = ""
+authors = ["Matheus Torrao <matheustorraox@gmail.com>"]
+readme = "README.md"
+[tool.poetry.dependencies]
+
+    python = ">=3.10,<4.0"
+    pandas = ">=2.2.3,<3.0.0"
+    plotly = ">=5.21.0,<6.0.0"
+    streamlit = ">=1.44.1,<2.0.0"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+requires-python = ">=3.10, <=4.0"

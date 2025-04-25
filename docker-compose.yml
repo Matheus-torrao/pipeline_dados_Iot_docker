@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres
+    container_name: meu-postgres
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=Mtsilva2509  
+    ports:
+      - "5432:5432" 
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  
+
+  app:
+    build: .
+    container_name: iot-poetry-app
+    depends_on:
+      - postgres
+    volumes:
+      - ./set_data:/app/set_data
+    env_file:
+      - .env
+    command: ["poetry", "run", "streamlit", "run", "insercao.py"]
+
+volumes:
+  postgres_data:
