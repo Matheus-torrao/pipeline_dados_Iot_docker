@@ -11,7 +11,7 @@ load_dotenv()
 
 # Conexão com o banco de dados
 Url = os.getenv('DATABASE_URL')
-engine = create_engine(Url)
+engine = create_engine(Url) 
 
 # Função para carregar dados de uma view com tratamento de erro
 def load_data(view_name):
