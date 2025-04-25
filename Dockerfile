@@ -22,4 +22,4 @@ RUN poetry install --no-root
 ENV PYTHONUNBUFFERED=1
 
 # Comando padrão para rodar o script
-CMD ["python","streamlit", "run", "insercao.py"]
+CMD ["streamlit", "run", "main.py"]
