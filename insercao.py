@@ -38,13 +38,17 @@ class IOTTemp(Base):
 Base.metadata.create_all(engine)
 
 # Ler dados do CSV
-df = pd.read_csv("/set_data/IOT-temp.csv")
+df = pd.read_csv("set_data/IOT-temp.csv") 
+
 
 # Ajusta nomes das colunas 
-df = df.rename(columns={"id": "record_id", "room_id/id": "room_id", "out/in": "location"})
+df = df.rename(columns={"id": "record_id", "room_id/id": "room_id", "out/in": "location"}) 
 
 # Converte a coluna de data para TIMESTAMP
 df["noted_date"] = pd.to_datetime(df["noted_date"], format="%d-%m-%Y %H:%M")
+
+# Remove duplicatas com base no record_id
+df = df.drop_duplicates(subset=["record_id"])
 
 # Cria lista de objetos para inserção
 records = [
