@@ -12,10 +12,11 @@ Etapas do Pipeline:
 
 Tecnologias Utilizadas:
   - PostgreSQL (armazenamento)
-  - Docker (container do banco de dados)
+  - Docker (Container para aplicação )
   - Python + SQLAlchemy (processamento e ingestão)
   - Streamlit (Visualização dos dados)
   - Biblioteca Os (Para leitura dos arquivos)
+  - Poetry (Para gerenciar dependencias )
 
 Conclusão:
 O desenvolvimento de um pipeline de dados para processar leituras de temperatura de dispositivos IoT e armazená-las em um banco de dados PostgreSQL utilizando Docker demonstrou a importância da integração eficiente entre sensores, comunicação, processamento e persistência de dados. A implementação permitiu a coleta, transformação e armazenamento contínuo das informações, garantindo confiabilidade e escalabilidade para futuras expansões.

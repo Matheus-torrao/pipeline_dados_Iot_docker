@@ -66,4 +66,3 @@ def consultar_view(view_name):
             print(row)
     except Exception as e:
         print(f"Erro ao consultar a view {view_name}: {e}")
-
