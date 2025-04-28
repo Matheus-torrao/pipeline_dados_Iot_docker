@@ -3,7 +3,7 @@
 
  Enunciado:
 Criar um pipeline de dados que processa leituras de temperatura de
-dispositivos IoT e armazena em um banco de dados PostgreSQL usando Docker.
+dispositivos IoT e armazena em um banco de dados PostgreSQL utilizando Docker.
 
 Etapas do Pipeline:
  - Geração de Dados: Sensores IoT (ou simulação) enviam leituras de temperatura.
