@@ -1,9 +1,11 @@
 [tool.poetry]
 name = "pipeline_dados_iot_docker"
 version = "0.1.0"
-description = ""
+description = "Pipeline criada para processamento, armazenamento e visualização de um dataSet"
+
 authors = ["Matheus Torrao <matheustorraox@gmail.com>"]
 readme = "README.md"
+
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
 pandas = ">=2.2.3,<3.0.0"
